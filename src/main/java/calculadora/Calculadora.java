@@ -60,7 +60,7 @@ public class Calculadora {
 	 */
 	public int somatoria(int n) {
 		int somatorio = 0;
-		while (n > 0) {
+		while (n >= 0) {
 			somatorio += n;
 			n--;
 		}
@@ -75,7 +75,7 @@ public class Calculadora {
 	 * @return
 	 */	
 	public boolean ehPositivo(int n) {
-		return n > 0;
+		return n >= 0;
 	}
 	
 	/**
@@ -88,7 +88,7 @@ public class Calculadora {
 		int retorno = 0;
 		if (a==b) {
 			retorno = 0;			
-		} else if (a >= b) {
+		} else if (a > b) {
 			retorno = 1;
 		} else {
 			retorno = -1;

@@ -4,14 +4,14 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import org.junit.Before;
+import org.junit.Test;
 
 public class CalculadoraTest {
 	
 	private Calculadora calc;
 	
-	@BeforeEach
+	@Before
 	public void configura() {
 		calc = new Calculadora();
 	}
@@ -77,5 +77,22 @@ public class CalculadoraTest {
 	@Test
 	public void testaComparaMenor() {
 		assertEquals("Compara segundo número maior incorreto", calc.compara(0, 1), -1);		
-	}			
+	}
+	
+	
+	@Test
+	public void testaDivisaoNumerosDiferentes() {
+		assertEquals("Divisão incorreta", calc.divisao(4, 2), 2);
+	} 	
+		
+	@Test
+	public void testaSubtracaoDiferentes() {
+		assertEquals("Subtração incorreta", calc.subtracao(5, 2), 3);
+	}	
+	
+	
+	@Test
+	public void testaMultiplicacaoDiferentes() {
+		assertEquals("Multiplicação incorreta", calc.multiplicacao(2, 3), 6);
+	}	
 }
